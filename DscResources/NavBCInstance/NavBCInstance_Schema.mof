@@ -1,0 +1,17 @@
+
+[ClassVersion("1.0.0.0"), FriendlyName("cNavBCInstance")]
+class NavBCInstance : OMI_BaseResource
+{
+    [Key] String ServerInstance;
+    [Write, ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
+    [Write, EmbeddedInstance(“MSFT_Credential“)] String ServiceAccountCredential;
+    [Write, ValueMap{"Windows", "Username", "NavUserPassword","AccessControlService"}, Values{"Windows", "Username", "NavUserPassword","AccessControlService"}] String ClientServicesCredentialType;
+    [Write, ValueMap{"User","LocalService","NetworkService","LocalSystem"}, Values{"User","LocalService","NetworkService","LocalSystem"] String ServiceAccount;
+    [Write] String ManagementServicesPort;
+    [Write] String ClientServicesPort;
+    [Write] String SOAPServicesPort;
+    [Write] String ODataServicesPort;
+    [Write] String DeveloperServicesPort;
+    [Write] String ServicesCertificateThumbprint;
+};
+
