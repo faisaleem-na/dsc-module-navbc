@@ -12,7 +12,7 @@
 # RootModule = ''
 
 # Version number of this module.
-ModuleVersion = '1.0'
+ModuleVersion = '1.0.1'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -82,7 +82,7 @@ AliasesToExport = @()
 
 # DSC resources to export from this module
 DscResourcesToExport = @(
-    'NavBCInstance'
+    'cNavBCInstance'
 )
 
 # List of all modules packaged with this module
